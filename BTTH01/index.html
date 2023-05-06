@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <?php foreach ($students as $student) { ?>
+    <tr>
+        <td>
+            <?php echo $student["id"]; ?>
+        </td>
+        <td>
+            <?php echo $student["name"]; ?>
+        </td>
+        <td>
+            <?php echo $student["age"]; ?>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+<form action="add_student.php" method="post">
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" required>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <button type="submit">Add Student</button>
+</form>
+
+</html>
